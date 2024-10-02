@@ -61,31 +61,6 @@ export function fillForm(personObj) {
   }
 }
 
-
-// export function validateFormValues(personObj){
-//     const validationObj = {
-//       name: `${personObj.fName} ${personObj.lName}`,
-//       email: personObj.email,
-//       gender: personObj.gender,
-//       mobile: personObj.phoneNumber,
-//       birth: `${Number(personObj.birthDay)} ${personObj.birthMonth},${personObj.birthYear}`,
-//       subjects: personObj.subjects.join(', '),
-//       hobby: personObj.hobby,
-//       file: personObj.file,
-//       address: personObj.address,
-//       stateCity: `${personObj.state} ${personObj.city}`
-//     }
-
-//     const validationKeys = Object.keys(validationObj);
-
-//   cy.get('tbody tr').each(($row, index) => {
-//     cy.wrap($row).find('td').eq(1).should(($secondTd) => {
-//       const expectedValue = validationObj[validationKeys[index]]; 
-//       expect($secondTd.text().trim()).to.eq(expectedValue);
-//     });
-//   });
-// }
-
 export function validateFormValues(personObj) {
   let formattedDate = '';
   if(!personObj.birthDay){
